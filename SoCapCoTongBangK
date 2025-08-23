@@ -1,0 +1,24 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+int main ()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {   
+        int n,k;
+        cin>>n>>k;    //nhap so luong ptu
+        int a[n];
+        for(int i=0;i<n;i++) //nhap cac ptu trong mang
+        cin>>a[i];
+        int count=0;
+        for(int i=0;i<n;i++) //lay 1 so lam goc xong cho so do cong voi cac so con lai
+        {
+            for(int j=i+1;j<n;j++)
+            if(a[i]+a[j]==k)
+            count++;
+        }
+        cout<<count<<endl;
+    }
+}
