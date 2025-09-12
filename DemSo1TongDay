@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+using namespace std;
+long long dem1(long long n) {
+    long long cnt = 0;
+    for (long long i = 0; i <= n; i++) {
+        string s = to_string(i); //bien so nguyen thanh chuoi de duyet tung ptu
+        for (char c : s) { //dung de duyet tung phan tu ma ko can chi so
+            if (c == '1') cnt++;
+        }
+    }
+    return cnt;
+}
+int main() {
+    int t;
+    cin >> t;
+    while (t--) {
+        long long n;
+        cin >> n;
+        cout << dem1(n) << "\n";
+    }
+    return 0;
+}
