@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+void daoNguoc(const string &s, int n) {
+    if (n < 0) return;
+    cout << s[n];
+    daoNguoc(s, n - 1);
+}
+
+int main() {
+    int t;
+    cin >> t;
+    cin.ignore();
+    while (t--) {
+        string s;
+        getline(cin, s);
+        if (s.empty()) {
+            cout << "\n";
+        } else {
+            daoNguoc(s, s.size() - 1);
+            cout << "\n";
+        }
+    }
+    return 0;
+}
